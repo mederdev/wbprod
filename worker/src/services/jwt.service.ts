@@ -1,9 +1,10 @@
 import * as jwt from 'jsonwebtoken';
 import config from "../config/config";
+
 import { JwtPayload } from "../types/jwt.payload";
+import {ITokens} from "../types/interfaces/tokens.interface";
 class JwtService {
-  constructor() {}
-  generateTokens(payload) {
+  generateTokens(payload): ITokens {
     const { jwtSecret, accessTokenExpiration , refreshTokenExpiration } = config.getJWTConfig();
     const accessToken = jwt.sign({
       ...payload,

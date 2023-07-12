@@ -1,4 +1,3 @@
-import * as amqp from 'amqplib';
 import { Connection } from 'amqplib';
 
 import { Channel } from "../types/interfaces/channel.interface";
@@ -8,7 +7,6 @@ import config from "../config/config";
 class RmqService {
   protected connection: Connection;
   protected channel: Channel;
-
   private queueName = 'default'
 
   init(connection, channel) {

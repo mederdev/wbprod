@@ -13,7 +13,7 @@ export default {
     if (QUEUE_NAME) {
       return QUEUE_NAME;
     } else {
-      console.error('RabbitMQ credentials error');
+      console.error('RabbitMQ queue credentials error');
       process.exit();
     }
   },

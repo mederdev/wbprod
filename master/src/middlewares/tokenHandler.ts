@@ -1,6 +1,6 @@
 const tokenHandler = (req, reply, done) => {
   try {
-    const token = req.headers.authorization.split('Bearer ')[1];
+    const token = req.headers?.apikey || req.headers.authorization.split('Bearer ')[1]
     if (!token) {
       return reply.send({ error: 'Missing access token' });
     }

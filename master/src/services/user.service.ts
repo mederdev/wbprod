@@ -1,10 +1,9 @@
 import RmqService from "./rmq.service";
-import {LoginDto} from "../types/dto/login.dto";
-import {CreateUserDto} from "../types/dto/create-user.dto";
-import {EventsEnum} from "../types/enums/events.enum";
+import { LoginDto } from "../types/dto/login.dto";
+import { CreateUserDto } from "../types/dto/create-user.dto";
+import { EventsEnum } from "../types/enums/events.enum";
 
 class UserService {
-  constructor() {}
   async signUp(data: CreateUserDto) {
     return await RmqService.sendMessage({
       event: EventsEnum.SIGN_UP,
@@ -28,10 +27,6 @@ class UserService {
       event: EventsEnum.LOGOUT,
       data: token,
     })
-  }
-
-  async temp() {
-
   }
 }
 export default new UserService()

@@ -13,6 +13,8 @@
   "author": "Mederbek",
   "license": "ISC",
   "dependencies": {
+    "@fastify/swagger": "^8.8.0",
+    "@fastify/swagger-ui": "^1.9.2",
     "@types/node": "^20.4.1",
     "amqplib": "^0.10.3",
     "env-cmd": "^10.1.0",

@@ -1,7 +1,6 @@
+import userService from "../services/user.service";
 import {CreateUserDto} from "../types/dto/create-user.dto";
 import {LoginDto} from "../types/dto/login.dto";
-
-import userService from "../services/user.service";
 
 class UserController {
   async signUp(req, rep) {

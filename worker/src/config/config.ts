@@ -13,7 +13,7 @@ export default {
     if (QUEUE_NAME) {
       return QUEUE_NAME;
     } else {
-      console.error('RabbitMQ credentials error')
+      console.error('RabbitMQ queue credentials error')
       process.exit();
     }
   },
@@ -37,7 +37,7 @@ export default {
         salt: Number(PASSWORD_SALT),
       }
     } else {
-      console.error('JWT credentials error');
+      console.error('Hash salt credential error');
       process.exit();
     }
   }

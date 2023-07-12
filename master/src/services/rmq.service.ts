@@ -1,4 +1,3 @@
-import * as amqp from 'amqplib';
 import { Connection } from 'amqplib';
 import { randomUUID } from "crypto";
 
@@ -39,7 +38,6 @@ class RmqService {
       const result = await responsePromise;
       return JSON.parse(result);
     } catch (err) {
-      console.log('Message send error:', err.message);
       return {
         message: err.message
       }
